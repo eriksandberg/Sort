@@ -1,6 +1,7 @@
 /**
  * User: Erik
  * Date: 2018-04-17
+ * A class implementing a comparable, printable data type
  */
 
 public class MyPrefix implements Comparable {
@@ -8,7 +9,7 @@ public class MyPrefix implements Comparable {
     public MyPrefix(Prefix prefix) {
         this.prefix = prefix;
 
-        switch (this.prefix) {
+        /*switch (this.prefix) {
             case FEMTO:
                 break;
             case PICO:
@@ -23,7 +24,7 @@ public class MyPrefix implements Comparable {
                 break;
             case DECI:
                 break;
-        }
+        }*/
     }
 
     private Prefix prefix;
@@ -51,7 +52,7 @@ public class MyPrefix implements Comparable {
         }
     }
 
-    // for printing
+    // For printing
     @Override
     public String toString() {
         return this.prefix.toString();
