@@ -22,5 +22,9 @@ public final class Main {
 
         int[] array4 = Generator.incrArray(10); // Don't put this at > 20
         algorithms.bogoSort(array4);
+        System.out.println("");
+
+        MyPrefix[] prefixArray = Generator.prefixArray(10);
+        algorithms.insertionSort(prefixArray);
     }
 }

@@ -1,6 +1,7 @@
 /**
  * User: Erik
  * Date: 2018-04-15
+ * Class implementing optimized bubble sort
  */
 
 public final class BubbleSortOptimized extends BubbleSort {

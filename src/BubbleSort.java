@@ -1,7 +1,7 @@
 /**
  * User: Erik
  * Date: 2018-04-12
- * Class implementing standard and optimized bubble sort
+ * Class implementing standard bubble sort
  */
 
 public class BubbleSort implements SortingAlgorithm {

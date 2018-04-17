@@ -3,6 +3,7 @@
  * Date: 2018-04-12
  * Class containing calls to different sorting algorithms and some utility
  * The timing is in no way accurate, simply calculating the time past sorting seem to take about 900 ns
+ * Primitives and generics... Fun fun fun
  */
 
 public final class Algorithms {
@@ -83,6 +84,40 @@ public final class Algorithms {
 
             return array;
         }
+    }
+
+    public <T extends Comparable<T>> T[] insertionSort(T[] array) {
+        InsertionSort algorithm = new InsertionSort();
+
+                if (timing) {
+                    time = System.nanoTime();
+                    array = algorithm.sort(array);
+                    time = System.nanoTime() - time;
+                    System.out.println("Nano seconds elapsed: " + time);
+                } else {
+                    array = algorithm.sort(array);
+                }
+
+                if (verbose) {
+                    System.out.println("Sorted with " + algorithm.getName());
+                    printArray(array, "Sorted array: ");
+                }
+
+                return array;
+    }
+
+    private static <T> void printArray(T[] array, String message) {
+        System.out.print(message);
+        printArray(array);
+    }
+
+    private static <T> void printArray(T[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length - 1; ++i) {
+            System.out.print(array[i]);
+            System.out.print(", ");
+        }
+        System.out.println(array[array.length - 1] + "]");
     }
 
     private static void printArray(int[] array, String message) {
